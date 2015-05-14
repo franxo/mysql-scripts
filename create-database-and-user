@@ -1,0 +1,12 @@
+-- log in mysql
+> mysql -uroot -p
+> Insert password
+
+-- create database "my_new_database"
+mysql> create database my_new_database;
+
+-- Allow "my_user" to connect to the server from localhost using the password "my_user_pass"
+mysql> grant usage on *.* to my_user@localhost identified by 'my_user_pass';
+
+-- Grant all privileges on "my_new_database" database to this user
+mysql> grant all privileges on my_new_database.* to my_user@localhost ;
